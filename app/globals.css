@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 224 71% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 204 94% 94%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+    --radius: 0.9rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-manrope), "Segoe UI", "Helvetica Neue", sans-serif;
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(191, 219, 254, 0.35), transparent 35%),
+      radial-gradient(circle at 100% 100%, rgba(196, 181, 253, 0.2), transparent 35%),
+      linear-gradient(180deg, #f8fafc 0%, #f5f9ff 100%);
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-xl border bg-card shadow-soft;
+  }
+}
